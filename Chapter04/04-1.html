@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4장 실습 - 구민지</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <style>
+        * {
+            font-family: "맑은 고딕";
+            margin: 5px;
+        }
+        header, footer, nav {
+            padding: 20px;
+            background-color: rgb(221, 188, 194);
+            text-align: center;
+        }
+        nav {
+            background-color: rgb(204, 202, 202);
+            font-size: 18px;
+            font-weight: bold;
+        }
+        a:link, a:visited {
+            color: black;
+            text-decoration: none;
+        }
+        a:hover, a:active {
+            color: white;
+        }
+        section {
+            background-color: rgb(255, 243, 251);
+            border: solid 2px rgb(29, 29, 29);
+            border-radius: 5px;
+            box-shadow: 2px 2px gray;
+            float: left;
+            display: block;
+            width: 49%;
+            height: 200px;
+        }
+        footer {
+            clear: both;
+        }
+        .c1 {
+            background-color: rgb(158, 157, 157);
+            color: white;
+            padding: 10px;
+        }
+        #s1 > .c1 {
+            background-color: rgb(83, 82, 82);
+        }
+        #s2 > .c1 {
+            background-color: royalblue;
+        }
+        #s3 > .c1 {
+            background-color: blue;
+        }
+        #s4 > .c1 {
+            background-color: rgb(218, 132, 132);
+        }
+        #s5 > .c1 {
+            background-color: rgb(129, 45, 45);
+        }
+        #s6 > .c1 {
+            background-color: rgb(226, 174, 106);
+        }
+        ol {
+            list-style-type: upper-roman;
+        }
+        ul {
+            list-style-type: square;
+        }
+        article {
+            line-height: 25px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 제목 영역 -->
+    <header id="u">
+        <img src="img/02_semantic.png">
+    </header>
+
+    <!-- 메뉴 영역 (내부 하이퍼링크) -->
+    <nav>
+        <!-- #s1 => 아이디가 s1인 영역 -->
+        <a href="#s1">&nbsp;&nbsp;header&nbsp;&nbsp;</a> <span class="material-symbols-outlined">more_vert</span>
+        <a href="#s2">&nbsp;&nbsp;nav&nbsp;&nbsp;</a> <span class="material-symbols-outlined">more_vert</span>
+        <a href="#s3">&nbsp;&nbsp;section&nbsp;&nbsp;</a> <span class="material-symbols-outlined">more_vert</span>
+        <a href="#s4">&nbsp;&nbsp;article&nbsp;&nbsp;</a> <span class="material-symbols-outlined">more_vert</span>
+        <a href="#s5">&nbsp;&nbsp;aside&nbsp;&nbsp;</a><span class="material-symbols-outlined">more_vert</span>
+        <a href="#s6">&nbsp;&nbsp;footer&nbsp;&nbsp;</a>
+    </nav>
+
+    <!-- 내용 영역 -->
+    <section id="s1"> <!-- id는 절대로 중복되면 안된다!! -->
+        <h1 class="c1">&lt;header&gt;</h1>
+        <article>
+            <ol>
+                <li>페이지나 섹션의 머리말 표현</li>
+                <li>페이지 제목, 페이지를 소개하는 간단한 설명</li>
+            </ol>
+        </article>
+    </section>
+
+    <section id="s2">
+        <h1 class="c1">&lt;nav&gt;</h1>
+        <article>
+            <ul>
+                <li>하이퍼링크들을 모아 놓은 특별한 섹션</li>
+                <li>페이지 내 목차를 만드는 용도</li>
+            </ul>
+        </article>
+    </section>
+
+    <section id="s3">
+        <h1 class="c1">&lt;section&gt;</h1>
+        <article>
+            <ul>
+                <li>문서의 장(chapter, section) 혹은 절을 구성하는 역할</li>
+                <li>일반 문서에 여러 장이 있듯이 웹 페이지에 여러 &lt;section&gt;가능</li>
+                <li>제목태그(&lt;h1&gt;~&lt;h6&gt;)를 사용하여 절 혹은 섹션의 주제 기입</li>
+            </ul>
+        </article>
+    </section>
+
+    <section id="s4">
+        <h1 class="c1">&lt;article&gt;</h1>
+        <article>
+            <ul>
+                <li>본문과 연관 있지만, 독립적인 콘텐트를 담는 영역</li>
+                <li>혹은 보조 기사, 블로그 포스트, 댓글 등 기타 독립적인 내용</li>
+                <li>article에 담는 내용이 많은 경우 여러 section 둘 수 있음</li>
+            </ul>
+        </article>
+    </section>
+
+    <section id="s5">
+        <h1 class="c1">&lt;aside&gt;</h1>
+        <article>
+            <ul>
+                <li>본문에서 약간 벗어난 노트나 팁</li>
+                <li>신문, 잡지에서 주요 기사 옆 관련 기사, 삽입 어구로 표시된 논평 등</li>
+                <li>페이지의 오른쪽이나 왼쪽에 주로 배치</li>
+            </ul>
+        </article>
+    </section>
+
+    <section id="s6">
+        <h1 class="c1">&lt;footer&gt;</h1>
+        <article>
+            <ul>
+                <li>꼬리말 영역, 주로 저자나 저작권 정보</li>
+            </ul>
+        </article>
+    </section>
+
+    <!-- 꼬리말 영역 (저작권, 회사 정보) -->
+    <footer>
+        &copy; Ku Minji
+        <br>
+        <p><a href="#u">위로가기</a></p> <!-- #만 사용해도 올라감 -->
+    </footer>
+
+</body>
+</html>
